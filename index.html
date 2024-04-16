@@ -27,6 +27,24 @@
             a.hover, a.active {
                 background-color: black;
             }
+            #back-to-top {
+                display: none;
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 99;
+                font-size: 16px;
+                border: none;
+                outline: none;
+                background-color: #333;
+                color: white;
+                cursor: pointer;
+                padding: 10px;
+                border-radius: 50%;
+            }
+            #back-to-top:hover {
+                background-color: #555
+            }
         </style>
         <title> Welcome to SecondHand Treasures! </title>
     </head>
@@ -86,6 +104,17 @@ Join us in our mission to make sustainable shopping accessible and exciting. Sho
     <a href="SellingHub.html"> Selling Hub </a>
     <a href="FAQ.html">Frequently Asked Questions</a>
     <br>
+    <a id="back-to-top" href="#top" onclick="scrollToTop()">
+        &#8679;
+    </a>
+    <script>
+        function scrollToTop(){
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
     <h6>Copyright 2024 Secondhand Wholesale Treasures and Company</h6>
     </div>
     </body>
