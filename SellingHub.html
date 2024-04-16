@@ -5,27 +5,49 @@
      body{
                 background-color: darkolivegreen;
             }
-            h1{
+            h2, h3, h4, h5, h6 {
+                text-align: left;
+                font-family: Verdana;
+            }
+
+            h1, p{
                 text-align: center;
                 font-family: Verdana;
             }
-            h2{
-                text-align: center;
-                font-family: Verdana;
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #c9bd93;
             }
-            p{
+            li{
+                float: left;
+            }
+            li a {
+                display: block;
+                color: white;
                 text-align: center;
-                font-family: Verdana;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            li a:hover{
+                background-color: #008081;
             }
             a:link, a:visited {
-                background-color: peru;
-                color: brown;
+                background-color: #c9bd93;
+                color: black;
                 text-align: center;
                 text-decoration: none;
                 display: inline-block;
             }
             a.hover, a.active {
-                background-color: black;
+                background-color: #008081;
+            }
+            label {
+                text-align: center;
+                font-family: verdana;
+                
             }
 </style>
 
@@ -33,20 +55,20 @@
 </head>
 <body>
     <img src="images/SecondhandTreasuresLogo.png" alt="Logo for SecondHand Treasures">
+    <h1>Selling Hub</h1>
 
-<div class="dropdown-content">
-<a href="index.html">Welcome</a>
-<a href="About.html">About Us</a>
-<a href="SaleItems.html"> Items for Sale</a>
-<a href="SellingHub.html"> Selling Hub </a>
-<a href="FAQ.html">Frequently Asked Questions</a>
-</div>
-<form action="/action_page.php">
+    <ul>
+        <li><a href="index.html">Welcome</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="SaleItems.html"> Items for Sale</a></li>
+        <li><a href="SellingHub.html"> Selling Hub </a></li>
+        <li><a href="FAQ.html">Frequently Asked Questions</a></li>
+    </ul>
+
     <label for="itemForSale"> What are you selling? </label>
     <input type="text" id="itemForSale" name="itemForSale">
     <br>
-<label for="itemImage"> Upload images of the item here. </label>
-<input type="file" id="itemImage" name="itemImage" accept="">
+
 <label for="ItemType"> What item is it? </label>
 <input type="text" id="ItemType" name="ItemType">
 <br>
@@ -58,9 +80,29 @@
 <br>
 <label for="AdditionalDetails"> any additional details? </label>
 <input type="text" id="AdditionalDetails" name="AdditionalDetails">
-<input type="submit" value="POST">
+
+<form method="post" enctype="multipart/form-data">
+    <p>
+        <label for="uploads"> Upload the images of the item you're selling.
+        </label>
+        <input
+            type="file"
+            id="uploads"
+            name="uploads"
+            accept=".jpeg, .jpg, .png"
+            multiple />
+    </p>
 </form>
 
+<input type="submit" value="POST" onclick="msg()">
+
+<script>
+    function msg(){
+        alert("Thank you for submission! Your post will be uploaded shortly.")
+    }
+</script>
+
+<hr>
 <div class="footer">
     <h2>Contact Us!</h2>
     <br>
@@ -71,11 +113,13 @@
     <h4>SecondhandTreasures@gmail.com</h4>
     <h4>P:982-201-4375</h4>
     <h4>S:982-431-9523</h4>
-    <a href="Welcome.html">Welcome</a>
-    <a href="About.html">About Us</a>
-    <a href="SaleItems.html"> Items for Sale</a>
-    <a href="SellingHub.html"> Selling Hub </a>
-    <a href="FAQ.html">Frequently Asked Questions</a>
+    <ul>
+        <li><a href="index.html">Welcome</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="SaleItems.html"> Items for Sale</a></li>
+        <li><a href="SellingHub.html"> Selling Hub </a></li>
+        <li><a href="FAQ.html">Frequently Asked Questions</a></li>
+    </ul>
     <br>
     <h6>Copyright 2024 Secondhand Wholesale Treasures and Company</h6>
     </div>

@@ -5,27 +5,45 @@
      body{
                 background-color: darkolivegreen;
             }
-            h1{
+            h2, h3, h4, h5, h6 {
+                text-align: left;
+                font-family: Verdana;
+            }
+
+            h1, p{
                 text-align: center;
                 font-family: Verdana;
             }
-            h2{
-                text-align: center;
-                font-family: Verdana;
+            
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #c9bd93;
             }
-            p{
+            li{
+                float: left;
+            }
+            li a {
+                display: block;
+                color: white;
                 text-align: center;
-                font-family: Verdana;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            li a:hover{
+                background-color: #008081;
             }
             a:link, a:visited {
-                background-color: peru;
-                color: brown;
+                background-color: #c9bd93;
+                color: black;
                 text-align: center;
                 text-decoration: none;
                 display: inline-block;
             }
             a.hover, a.active {
-                background-color: black;
+                background-color: #008081;
             }
 </style>
 
@@ -34,16 +52,16 @@
 <body>
     <img src="images/SecondhandTreasuresLogo.png" alt="Logo for SecondHand Treasures">
     
-<div class="dropdown-content">
-<a href="index.html">Welcome</a>
-<a href="About.html">About Us</a>
-<a href="SaleItems.html"> Items for Sale</a>
-<a href="SellingHub.html"> Selling Hub </a>
-<a href="FAQ.html">Frequently Asked Questions</a>
-</div>
+    <h1> About Us </h1>
+    <ul>
+        <li><a href="index.html">Welcome</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="SaleItems.html"> Items for Sale</a></li>
+        <li><a href="SellingHub.html"> Selling Hub </a></li>
+        <li><a href="FAQ.html">Frequently Asked Questions</a></li>
+    </ul>
 
 
-<h1> About Us </h1>
 <p> Secondhand Treasures is everything a thrift store has to offer, but exclusively online. </p>
 <img src="" alt="">
 <img src="" alt="">
@@ -51,24 +69,24 @@
 <br>
 <hr>
 <div class="footer">
-<h1>Contact Us!</h1>
-<br>
-<h2>Headquarters:</h2>
-<h3>576 Oak Avenue</h3>
-<h3>Suite 201</h3>
-<h3>Willow Creek, Riverdale 54213</h3>
-<br>
-<h3>SecondhandTreasures@gmail.com</h3>
-<h3>P:982-201-4375</h3>
-<h3>S:982-431-9523</h3>
-<br>
-<a href="index.html">Welcome</a>
-<a href="About.html">About Us</a>
-<a href="SaleItems.html"> Items for Sale</a>
-<a href="SellingHub.html"> Selling Hub </a>
-<a href="FAQ.html">Frequently Asked Questions</a>
-<br>
-<h6>Copyright 2024 Secondhand Wholesale Treasures and Company</h6>
-</div>
+    <h2>Contact Us!</h2>
+    <br>
+    <h4>Headquarters:</h4>
+    <h4>576 Oak Avenue</h4>
+    <h4>Suite 201</h4>
+    <h4>Willow Creek, Riverdale 54213</h4>
+    <h4>SecondhandTreasures@gmail.com</h4>
+    <h4>P:982-201-4375</h4>
+    <h4>S:982-431-9523</h4>
+    <ul>
+        <li><a href="index.html">Welcome</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="SaleItems.html"> Items for Sale</a></li>
+        <li><a href="SellingHub.html"> Selling Hub </a></li>
+        <li><a href="FAQ.html">Frequently Asked Questions</a></li>
+    </ul>
+    <br>
+    <h6>Copyright 2024 Secondhand Wholesale Treasures and Company</h6>
+    </div>
 </body>
 </html>

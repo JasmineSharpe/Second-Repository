@@ -5,15 +5,12 @@
             body{
                 background-color: darkolivegreen;
             }
-            h1{
-                text-align: center;
+             h2, h3, h4, h5, h6 {
+                text-align: left;
                 font-family: Verdana;
             }
-            h2{
-                text-align: center;
-                font-family: Verdana;
-            }
-            p{
+
+            h1, p{
                 text-align: center;
                 font-family: Verdana;
             }
@@ -22,7 +19,7 @@
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                background-color: dimgray;
+                background-color: #c9bd93;
             }
             li{
                 float: left;
@@ -30,26 +27,89 @@
             li a {
                 display: block;
                 color: white;
-                text-align: cenzter;
+                text-align: center;
                 padding: 14px 16px;
                 text-decoration: none;
             }
             li a:hover{
-                background-color: black;
+                background-color: #008081;
             }
             a:link, a:visited {
-                background-color: peru;
-                color: brown;
+                background-color: #c9bd93;
+                color: black;
                 text-align: center;
                 text-decoration: none;
                 display: inline-block;
             }
             a.hover, a.active {
-                background-color: black;
+                background-color: #008081;
             }
-            .splide--slide img {
-                width: 100%;
-                height: auto;
+            * {box-sizing:border-box}
+            img{
+                vertical-align: middle;
+            }
+    
+            .slideshow-container {
+                max-width: 1000px;
+                position: relative;
+                margin: auto;
+            }
+            .slides {
+                display: none;
+            }
+            .prev, .next{
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                margin-top: -22px;
+                padding: 16px;
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+            }
+            .next{
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+            .prev:hover, .next:hover {
+                background-color: rgba(0,0,0,0.8);
+            }
+
+            .textnumbers {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+            }
+
+            .dot{
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+
+            .active, .dot:hover {
+                background-color: #717171;
+            }
+
+            .fade {
+                animation-name: fade;
+                animation-duration: 2.s;
+            }
+            @keyframes fade {
+                from{opacity: .5;}
+                to {opacity: 1}
+                
             }
             #back-to-top {
                 display: none;
@@ -60,23 +120,24 @@
                 font-size: 16px;
                 border: none;
                 outline: none;
-                background-color: #333;
+                background-color: #008081;
                 color: white;
                 cursor: pointer;
                 padding: 10px;
                 border-radius: 50%;
             }
             #back-to-top:hover {
-                background-color: #555
+                background-color: #c9bd93
             }
         </style>
         <title> Welcome to SecondHand Treasures! </title>
     </head>
 </html>
 <body>
+    <div class="container">
     <img src="images/SecondhandTreasuresLogo.png" alt="Logo for SecondHand Treasures">
     <h1> Welcome to Secondhand Treasures!</h1>
-
+    </div>
     <ul>
         <li><a href="index.html">Welcome</a></li>
         <li><a href="about.html">About Us</a></li>
@@ -85,29 +146,55 @@
         <li><a href="FAQ.html">Frequently Asked Questions</a></li>
     </ul>
     
+    <br>   
     
-    <br>
-    
-    <section id="image-carousel" class="splide" aria-label="Images">
-        <div class="splide--track">
-            <ul class="splide--list">
-                <li class="splide--slide">
-                    <img src="images/thriftStoreImage.jpeg" alt="image of woman shopping">
-                </li>
-                <li class="splide--slide">
-                    <img src="images/recycle reduce reuse.jpeg" alt="wall painted that states recylce reduce reuse">
-                </li>
-                <li class="splide--slide">
-                    <img src="images/fastFashionLandfills.jpeg" alt="image of landfill with clothes">
-                </li>
-                <li class="splide--slide">
-                    <img src="images/racks of clothes.jpeg" alt="racks of clothes">
-                </li>
-            </ul>
+    <div class="slideshow-container">
+        <div class="slides fade">
+            <div class="textnumbers"> 1/4</div>
+            <img src="images/thriftStoreImage.jpeg" alt="image of woman shopping">
         </div>
-    </section>
-    
+
+        <div class="slides fade">
+            <div class="textnumbers"> 2/4</div>
+            <img src="images/recycle reduce reuse.jpeg" alt="wall painted that states recylce reduce reuse">        
+        </div>
+        <div class="slides fade">
+            <div class="textnumbers"> 3/4</div>
+            <img src="images/fastFashionLandfills.jpeg" alt="image of landfill with clothes">
+        </div>
+        <div class="slides fade">
+            <div class="textnumbers">4/4</div>
+            <img src="images/racks of clothes.jpeg" alt="racks of clothes">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+        <a class="next" onclick="plusSlides(1)">&#10095</a>    
+    </div>
     <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>      
+
+      <script>
+      let slideIndex = 0;
+        showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("slides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 5000); 
+}
+</script>
 
     <p>
         Welcome to Secondhand Treasures, where sustainability meets style! Our online marketplace is dedicated to curating a collection of secondhand items that are not only fashionable but also environmentally conscious. 
@@ -119,40 +206,32 @@ Browse through our wide selection of clothing, accessories, and home goods, all 
 Join us in our mission to make sustainable shopping accessible and exciting. Shop Secondhand Treasures and embrace a more eco-conscious way of living, one stylish find at a time.
     </p>
     
-    <a href="SellingHub.html"> Interested in selling? Click Here! </a>
+    <ul>
+        <li><a href="SellingHub.html"> Interested in selling? Click Here! </a></li>
+    </ul>
+    
     
     <br>
     <hr>
     <div class="footer">
-    <h1>Contact Us!</h1>
-    <br>
-    <h2>Headquarters:</h2>
-    <h3>576 Oak Avenue</h3>
-    <h3>Suite 201</h3>
-    <h3>Willow Creek, Riverdale 54213</h3>
-    <br>
-    <h3>SecondhandTreasures@gmail.com</h3>
-    <h3>P:982-201-4375</h3>
-    <h3>S:982-431-9523</h3>
-    <br>
-    <a href="index.html">Welcome</a>
-    <a href="About.html">About Us</a>
-    <a href="SaleItems.html"> Items for Sale</a>
-    <a href="SellingHub.html"> Selling Hub </a>
-    <a href="FAQ.html">Frequently Asked Questions</a>
-    <br>
-    <a id="back-to-top" href="#" onclick="scrollToTop()">
-        &#8679;
-    </a>
-    <script>
-        function scrollToTop(){
-            window.scrollTo(0, 0);
-        }
-    </script>
-    <h6>Copyright 2024 Secondhand Wholesale Treasures and Company</h6>
-    </div>
-    <script>
-        new Splide( '#image-carousel').mount();
-    </script>
+        <h2>Contact Us!</h2>
+        <br>
+        <h4>Headquarters:</h4>
+        <h4>576 Oak Avenue</h4>
+        <h4>Suite 201</h4>
+        <h4>Willow Creek, Riverdale 54213</h4>
+        <h4>SecondhandTreasures@gmail.com</h4>
+        <h4>P:982-201-4375</h4>
+        <h4>S:982-431-9523</h4>
+        <ul>
+            <li><a href="index.html">Welcome</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="SaleItems.html"> Items for Sale</a></li>
+            <li><a href="SellingHub.html"> Selling Hub </a></li>
+            <li><a href="FAQ.html">Frequently Asked Questions</a></li>
+        </ul>
+        <br>
+        <h6>Copyright 2024 Secondhand Wholesale Treasures and Company</h6>
+        </div>
     </body>
     </html>
