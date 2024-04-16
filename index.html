@@ -17,6 +17,26 @@
                 text-align: center;
                 font-family: Verdana;
             }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: dimgray;
+            }
+            li{
+                float: left;
+            }
+            li a {
+                display: block;
+                color: white;
+                text-align: cenzter;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            li a:hover{
+                background-color: black;
+            }
             a:link, a:visited {
                 background-color: peru;
                 color: brown;
@@ -26,6 +46,10 @@
             }
             a.hover, a.active {
                 background-color: black;
+            }
+            .splide--slide img {
+                width: 100%;
+                height: auto;
             }
             #back-to-top {
                 display: none;
@@ -51,24 +75,37 @@
 </html>
 <body>
     <img src="images/SecondhandTreasuresLogo.png" alt="Logo for SecondHand Treasures">
-
-    <div class="dropdown-content">
-    <a href="index.html">Welcome</a>
-    <a href="about.html">About Us</a>
-    <a href="SaleItems.html"> Items for Sale</a>
-    <a href="SellingHub.html"> Selling Hub </a>
-    <a href="FAQ.html">Frequently Asked Questions</a>
-    </div>
-    
     <h1> Welcome to Secondhand Treasures!</h1>
+
+    <ul>
+        <li><a href="index.html">Welcome</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="SaleItems.html"> Items for Sale</a></li>
+        <li><a href="SellingHub.html"> Selling Hub </a></li>
+        <li><a href="FAQ.html">Frequently Asked Questions</a></li>
+    </ul>
+    
+    
     <br>
-    <div="photos-container">
-    <img src="images/thriftStoreImage.jpeg" alt="image of woman shopping">
-    <img src="images/recycle reduce reuse.jpeg" alt="wall painted that states recylce reduce reuse">
-    <img src="images/fastFashionLandfills.jpeg" alt="image of landfill with clothes">
-    <img src="images/racks of clothes.jpeg" alt="racks of clothes">
-    <img src="" alt="">
-    </div>
+    
+    <section id="image-carousel" class="splide" aria-label="Images">
+        <div class="splide--track">
+            <ul class="splide--list">
+                <li class="splide--slide">
+                    <img src="images/thriftStoreImage.jpeg" alt="image of woman shopping">
+                </li>
+                <li class="splide--slide">
+                    <img src="images/recycle reduce reuse.jpeg" alt="wall painted that states recylce reduce reuse">
+                </li>
+                <li class="splide--slide">
+                    <img src="images/fastFashionLandfills.jpeg" alt="image of landfill with clothes">
+                </li>
+                <li class="splide--slide">
+                    <img src="images/racks of clothes.jpeg" alt="racks of clothes">
+                </li>
+            </ul>
+        </div>
+    </section>
     
     <br>
 
@@ -104,18 +141,18 @@ Join us in our mission to make sustainable shopping accessible and exciting. Sho
     <a href="SellingHub.html"> Selling Hub </a>
     <a href="FAQ.html">Frequently Asked Questions</a>
     <br>
-    <a id="back-to-top" href="#top" onclick="scrollToTop()">
+    <a id="back-to-top" href="#" onclick="scrollToTop()">
         &#8679;
     </a>
     <script>
         function scrollToTop(){
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo(0, 0);
         }
     </script>
     <h6>Copyright 2024 Secondhand Wholesale Treasures and Company</h6>
     </div>
+    <script>
+        new Splide( '#image-carousel').mount();
+    </script>
     </body>
     </html>

@@ -41,27 +41,36 @@
 <a href="SellingHub.html"> Selling Hub </a>
 <a href="FAQ.html">Frequently Asked Questions</a>
 </div>
-
-<h1> What are you Selling?</h1>
+<form action="/action_page.php">
+    <label for="itemForSale"> What are you selling? </label>
+    <input type="text" id="itemForSale" name="itemForSale">
+    <br>
+<label for="itemImage"> Upload images of the item here. </label>
+<input type="file" id="itemImage" name="itemImage" accept="">
+<label for="ItemType"> What item is it? </label>
+<input type="text" id="ItemType" name="ItemType">
 <br>
-<h3> Upload images of the item here. </h3>
-<h3> What item is it? </h3>
-<h3> Set the price of the item. </h3>
-<h3> Add a vivid description of the item. Be sure to include viable details for the buyer! </h3>
-<h3> any additional details? </h3>
+<label for="ItemPrice"> Set the price of the item. </label>
+<input type="text" id="ItemPrice" name="ItemPrice">
+<br>
+<label for="ItemDescription"> Add a vivid description of the item. Be sure to include viable details for the buyer! </label>
+<input type="text" id="ItemDescription" name="ItemDescription">
+<br>
+<label for="AdditionalDetails"> any additional details? </label>
+<input type="text" id="AdditionalDetails" name="AdditionalDetails">
+<input type="submit" value="POST">
+</form>
 
 <div class="footer">
-    <h1>Contact Us!</h1>
+    <h2>Contact Us!</h2>
     <br>
-    <h2>Headquarters:</h2>
-    <h3>576 Oak Avenue</h3>
-    <h3>Suite 201</h3>
-    <h3>Willow Creek, Riverdale 54213</h3>
-    <br>
-    <h3>SecondhandTreasures@gmail.com</h3>
-    <h3>P:982-201-4375</h3>
-    <h3>S:982-431-9523</h3>
-    <br>
+    <h4>Headquarters:</h4>
+    <h4>576 Oak Avenue</h4>
+    <h4>Suite 201</h4>
+    <h4>Willow Creek, Riverdale 54213</h4>
+    <h4>SecondhandTreasures@gmail.com</h4>
+    <h4>P:982-201-4375</h4>
+    <h4>S:982-431-9523</h4>
     <a href="Welcome.html">Welcome</a>
     <a href="About.html">About Us</a>
     <a href="SaleItems.html"> Items for Sale</a>
