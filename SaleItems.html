@@ -44,14 +44,68 @@
             a.hover, a.active {
                 background-color: #008081;
             }
+            .container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .logo{
+                max-width: 25%;
+                max-height: 15%;
+                float: left;
+            }
+            .title{
+                font-size: 25px;
+                padding-left: 20px;
+                padding-top: 20%;
+                float: left;
+            }
+            * {
+                box-sizing: border-box;
+                }
+
+            form.example input[type=text] {
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid grey;
+            float: left;
+            width: 80%;
+            background: #f1f1f1;
+            }
+            form.example button {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+            }
+
+            form.example button:hover {
+            background: #0b7dda;
+            }
+
+            form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+            }
 </style>
 
 <title> Items for Sale </title>
 </head>
 <body>
-    <img src="images/SecondhandTreasuresLogo.png" alt="Logo for SecondHand Treasures">
-
-    <h1> Available Items for Sale </h1>
+    <div class="container">
+        <div class="logo">
+            <img src="images/SecondhandTreasuresLogo.png" alt="Logo for SecondHand Treasures">
+        </div>
+        <div class="title">
+            <h1> Items for Sale </h1>
+        </div>
+        </div>
 
     <ul>
         <li><a href="index.html">Welcome</a></li>
@@ -61,7 +115,10 @@
         <li><a href="FAQ.html">Frequently Asked Questions</a></li>
     </ul>
 
-
+    <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+        <input type="text" placeholder="Search.." name="search2">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
 <br>
 <hr>
 <div class="footer">
