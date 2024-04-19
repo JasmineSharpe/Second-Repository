@@ -1,7 +1,7 @@
 <?php
     require_once 'connection.php';
 
-    $sql = "SELECT * FROM 'items for sale' ";
+    $sql = "SELECT * FROM 'items for sale'";
     $all_product = $conn->query($sql);
 ?>
 <!DOCTYPE html>
