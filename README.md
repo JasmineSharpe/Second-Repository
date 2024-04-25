@@ -1,0 +1,1 @@
+Here is a website I created for my Sophomore Seminar Class. It is a website entitled "Secondhand Treasures", an online e-commerce site that offers a means for online secondhand buying, which also emphasizes the importance of why recycling is important.
