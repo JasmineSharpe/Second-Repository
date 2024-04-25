@@ -1,8 +1,5 @@
 <?php
     require_once 'connection.php';
-
-    $sql = "SELECT * FROM 'items for sale'";
-    $all_product = $conn->query($sql);
 ?>
 <!DOCTYPE html>
 <html>
@@ -126,27 +123,35 @@
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
 
-    <?php include 'database.php' 
 
-    ?>
     <main>
         <?php
+            if(mysqli_num_rows($all_product) > 0) {
             while($row = mysqli_fetch_assoc($all_product)) {
         ?>
         <div class="card">
             <div class="image">
-                <img src="<?php echo $row["ItemImage"]; ?>" alt="">            
+                <?php
+                $imageData = base64_encode($row["ItemImage"]);
+                $imageType = "image/jpeg";
+                $src = "data:".$imageType.";base64,".$imageData;
+                ?>
+                <img src="<?php echo $src; ?>" alt="image of sale item">  
             </div>
             <div class="caption">
                 <p class="product_type"> <?php echo $row["ItemType"]; ?> </p>
                 <p class="product_name"> <?php echo $row["ItemTitle"]; ?> </p>
                 <p clas="product_colors"> <?php echo $row["Colors"]; ?> </p>
                 <p class="price"> <?php echo $row["Price"]; ?> </p>
-            </div>
-            <button class="add"> Add to Cart </button>
+                <button class="add"> Add to Cart </button>
+            </div>    
         </div>
         <?php
             }
+       } 
+       else {
+        echo "No products available."; }
+       
     ?>
     </main>
 
