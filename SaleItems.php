@@ -96,6 +96,69 @@
             clear: both;
             display: table;
             }
+
+.card {
+            margin: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .image {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .caption {
+            text-align: center;
+        }
+        
+        .caption .product_type {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .caption .product_name {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .caption .product_colors {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .caption .price {
+            font-size: 16px;
+            color: #333;
+        }
+        
+        .caption .add {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition-duration: 0.4s;
+        }
+        
+        .caption .add:hover {
+            background-color: #45a049;
+            color: white;
+        }
 </style>
 
 <title> Items for Sale </title>
